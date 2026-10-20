@@ -1,3 +1,4 @@
+import os
 import unittest
 from flingfort import *
 class Physics(unittest.TestCase):
@@ -15,3 +16,13 @@ class Physics(unittest.TestCase):
  def test_collapse(self):
   b=Block(50,6);settle([b]);self.assertEqual(b.y,4)
 if __name__=='__main__':unittest.main()
+
+
+class I18nTests(unittest.TestCase):
+    def test_defaults_match_catalog(self):
+        import pi18n
+        self.assertTrue(DEFAULT_STRINGS["INTRO"])
+        self.assertIn("{shots}", DEFAULT_STRINGS["HUD"])
+    def test_overlay(self):
+        S = dict(DEFAULT_STRINGS); S["PAUSED"] = "PAUSA"
+        self.assertEqual(S["PAUSED"], "PAUSA")
