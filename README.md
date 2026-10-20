@@ -4,6 +4,10 @@ An original fullscreen, color terminal slingshot game. Launch stone balls at blo
 
 Adjust angle with A/D or Left/Right, power with W/S or Up/Down, Space to fire. R restarts, N advances after clearing the fort, P pauses, Q quits. The dotted arc previews the opening flight, not the entire landing. Towers have simple support-collapse physics, not a realistic rigid-body simulation. Seven shots per level; unlimited retries and increasing forts.
 
+## Languages
+
+Works with the Translations app: pick a language there and the HUD, messages and help lines switch to it (English, Espanol, Francais, Deutsch). With no Translations app installed it runs in English as usual.
+
 ## Run
 
 `python3 flingfort.py` in a terminal at least 70 columns x 22 rows. Smaller screens show a resize prompt rather than broken layout. Pi App Store discovers this repository in Games using app-store.sh. The installer checks Python/curses and installs Debian Python only when needed. No network downloads or pip packages at launch.
